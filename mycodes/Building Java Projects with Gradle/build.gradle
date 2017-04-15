@@ -1,0 +1,20 @@
+apply plugin: 'java'
+mainClassName ='hello.HelloWorld'
+
+repositories {//定义第三方库引用的地址
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+//自定义生成的jar的名字
+jar {
+    baseName = 'gs-gradle'
+    version =  '0.1.0'
+}
+
+dependencies {///定义依赖项，执行gradle build阶段会将依赖项从库中心下载下来
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
