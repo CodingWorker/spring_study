@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 引入schema beans 文档 -->
+<!-- 引入w3c文档 -->
+<!-- 引入 -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 使用bean标签 -->
+    <bean id="userService" class="com.itheina.day01.UserService" scope="singleton"
+          init-method="constructor" destroy-method="destructor">
+        <!-- 字段注入 -->
+        <property name="Name" value="Daniel"/>
+    </bean>
+    <bean scope="singleton" id="customDAO" class="com.itheina.day01.CustomDAO"/>
+    <bean id="customService" class="com.itheina.day01.CustomService" scope="singleton">
+        <property name="customDAO" ref="customDAO"/>
+    </bean>
+    <bean scope="singleton" id="person" class="com.itheina.day01.Person">
+        <constructor-arg name="name" value="daniel" />
+        <constructor-arg name="age" value="12"/>
+    </bean>
+    <!--采用p名称空间注入的方式
+        1. 引入p空间
+        2. 书写注入(需要保证class有set方法
+        -->
+    <bean id="person2" class="com.itheina.day01.Person2" p:name="daniel2" p:age="12"/>
+
+    <bean id="person3" class="com.itheina.day01.Person3" scope="singleton">
+        <property name="Name" value="#{'daniel3'}"/>
+        <property name="Age" value="#{12+3}"/>
+        <property name="IsOK" value="#{true}"/>
+    </bean>
+
+    <!-- 集合注入
+    <bean id="user" class="com.itheina.day01.User">
+        <property name="arrs">
+            <array>
+                <value>a</value>
+                <value>b</value>
+            </array>
+        </property>
+        <property name="nameList">
+            <list>
+                <value>john</value>
+                <value>daniel</value>
+                <value>tom</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="a" value="map:a"/>
+                <entry key="b" value="map:b"/>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="a">aa</prop>
+                <prop key="b">bb</prop>
+            </props>
+        </property>
+    </bean>
+    -->
+    <import resource="userContext.xml"></import>
+</beans>

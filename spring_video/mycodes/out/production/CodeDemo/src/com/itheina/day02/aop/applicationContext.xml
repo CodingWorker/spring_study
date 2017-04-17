@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <context:component-scan base-package="com.itheina.day02.aop"/>
+
+    <bean id="customerDAO" class="com.itheina.day02.aop.CustomerDAO"></bean>
+
+    <!-- 切面类 -->
+    <bean id="myAspectXml" class="com.itheina.day02.aop.MyAspectXml"></bean>
+
+    <!-- 配置AOP -->
+    <aop:config>
+        <!-- 配置切面类；切入点；通知<类型> -->
+        <aop:aspect ref="myAspectXml">
+            <!-- 前置通知：save方法执行之前增强方法log执行 -->
+            <!-- 切入点表达式
+            execution(public void com.itheina.day02.aop.CustomerDAO.save())
+            1. execution必须
+            2. 访问修饰符可以省略
+            3. 找不到对应的方法不做任何操作
+            4. 返回类型不能省略，*为通配符，可以匹配任何返回类型
+            5. 包名不能省略，可以使用*匹配一层包名，可以使用*..*匹配多层包
+            6. 类名不能省略，可以使用*匹配任何类或者类名前缀
+            7. 方法名不能省略，可以使用*匹配
+            8. 方法的参数不能省略，可以使用*匹配一个参数；可以使用..匹配任何多个的任何参数
+            -->
+            <aop:before method="log" pointcut="execution(public void com.itheina.day02.aop.CustomerDAO.save())"/>
+            <aop:after method="loginOut" pointcut="execution(public void com.itheina.day02.aop.CustomerDAO.update())"/>
+
+            <!-- 环绕通知 -->
+            <aop:around method="around" pointcut="execution(public * *..*.*DAO.save(..))"/>
+
+            <aop:after-returning method="finall" pointcut="execution(public * *..*.*DAO.sa*(..))"/>
+
+        </aop:aspect>
+    </aop:config>
+</beans>

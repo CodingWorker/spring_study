@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 开启context扫描 -->
+    <!-- Spring的注解开发:组件扫描(类上注解: 可以直接使用属性注入的注解) -->
+    <context:component-scan base-package="com.itheina.day02"/>
+    <!--使用注解来代替此配置
+    <bean id="userDAO" class="com.itheina.day02.UserDAO"/>
+    <bean id="userService" class="com.itheina.day02.UserService">
+        <property name="userDAO" ref="userDAO"/>
+    </bean>
+    -->
+
+</beans>
