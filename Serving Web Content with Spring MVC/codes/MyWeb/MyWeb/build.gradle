@@ -1,0 +1,44 @@
+//buildscript {
+//    repositories {
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.2.RELEASE")
+//    }
+//}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+//apply plugin: 'org.springframework.boot'
+
+mainClassName = 'com.example.main.Main'
+
+//tag::jar[]
+jar {
+    baseName = 'myweb-sample'
+    version =  '0.1.0'
+}
+//end::jar[]
+
+//tag::repositories[]
+repositories {
+    mavenCentral()
+}
+//end::repositories[]
+
+//tag::dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    //compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+   // compile("org.springframework.boot:spring-boot-devtools")
+    testCompile("junit:junit")
+}
+//end::dependencies[]
+
+
+
+
+
