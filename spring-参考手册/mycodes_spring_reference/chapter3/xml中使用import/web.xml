@@ -1,0 +1,9 @@
+<!--忽略xml定义的头-->
+<beans>
+<!--在xml元数据中使用import语句，import必须写在第一个bean定义之前-->
+<!--根据要求，外部定义的bean文件需要时完全有效的xmlbean定义文件，而且根节点必须为<beans/>元素-->
+    <import resource="bean1.xml" />
+    <import resource="bean2.xml" />
+    <import resource="dao.xml" />
+    <bean id="c" class="com.example.cc" />
+</beans>
