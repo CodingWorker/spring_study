@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd ">
+    <bean id="useContainer" class="main.java.com.example.UseContainer">
+        <!--根据类型注入构造参数
+        <constructor-arg><bean class="main.java.com.example.UseItem"></bean></constructor-arg>-->
+
+        <!--使用type说明注入参数的类型，不要求顺序
+        <constructor-arg type="java.lang.Integer" value="10"/>
+        <constructor-arg type="java.lang.String" value="jack" />-->
+
+        <!--使用index指明注入构造参数，不要求顺序-->
+        <constructor-arg index="0" value="apache" />
+        <constructor-arg index="1" value="11"/>
+
+        <!--使用setter 注入-->
+        <property name="val_string" value="setter-string"/>
+        <property name="val_int" value="15"/>
+
+        <!--setter注入引用类型使用ref-->
+        <property name="meta" ref="useMeta" />
+        <property name="item" ref="useItem"/>
+    </bean>
+    <bean id="useItem" class="main.java.com.example.UseItem"></bean>
+    <bean id="useMeta" class="main.java.com.example.UseMeta" />
+</beans>

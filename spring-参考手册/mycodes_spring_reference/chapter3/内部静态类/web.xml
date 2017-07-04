@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+	<!-- 内部类使用$与外部类隔开 -->
+	<bean id="Test_InnerTest" class="com.example.main.java.Test$InnerTest" />
+</beans>
