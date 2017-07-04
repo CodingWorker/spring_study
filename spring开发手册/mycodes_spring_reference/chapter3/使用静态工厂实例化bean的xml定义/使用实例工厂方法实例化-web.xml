@@ -1,9 +1,0 @@
-<!-- the factory bean, which contains a method called createInstance() -->
-<!--createInstance即在bean的类中定义的静态工厂方法-->
-<bean id="serviceLocator" class="com.foo.DefaultServiceLocator">
-  <!-- inject any dependencies required by this locator bean -->
-  </bean>
-
-  <!-- the bean to be created via the factory bean -->
-  <bean id="exampleBean" factory-bean="serviceLocator" factory-method="createInstance"/>
-

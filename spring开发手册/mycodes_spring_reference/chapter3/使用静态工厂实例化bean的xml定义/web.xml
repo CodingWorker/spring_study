@@ -1,2 +1,0 @@
-<!--不同于普通的根据构造器来构建bean，使用静态工厂时需要使用factory-method指定静态工厂方法的名称-->
-<bean id="exampleBean" class="examples.ExampleBean2" factory-method="createInstance" />
