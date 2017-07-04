@@ -2,10 +2,7 @@ package main.java.com.example;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
-import org.springframework.beans.factory.xml.XmlReaderContext;
-import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.FileSystemResource;
-import org.springframework.web.context.support.XmlWebApplicationContext;
 
 /**
  * Created by daiya on 2017/7/4.
