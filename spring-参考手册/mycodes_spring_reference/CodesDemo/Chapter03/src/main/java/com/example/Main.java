@@ -14,5 +14,24 @@ public class Main {
         UseContainer uc=(UseContainer) bf.getBean("useContainer");
         System.out.println(item==uc.getItem());
         System.out.println(uc.getName());
+
+//        UseJDBC useJDBC=(UseJDBC)bf.getBean("useJDBC");
+//        System.out.println(useJDBC.getUrl());
+
+//        使用内部bean
+        InnerBean innerBean=(InnerBean)bf.getBean("innerBean");
+        System.out.println(innerBean.getInnerBeanItem().hashCode());
+
+        ListDemo listDemo=(ListDemo)bf.getBean("listDemo");
+        System.out.println(listDemo.getNameList().get(0));
+        //使用<null/>
+        System.out.println(listDemo.getNameMap()==null);
+        System.out.println(listDemo.getInnerString().equals(""));
+        System.out.println("|"+listDemo.getInnerString()+"|");
+
+        //测试p命名空间
+        UsePNameSpace usePNameSpace=(UsePNameSpace)bf.getBean("usePNameSpace");
+        System.out.println(usePNameSpace.getEmail());
+        System.out.println(usePNameSpace.getpNameSpaceItem());
     }
 }

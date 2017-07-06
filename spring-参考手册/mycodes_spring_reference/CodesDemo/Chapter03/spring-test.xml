@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans
@@ -32,4 +33,40 @@
     </bean>
     <bean id="useItem" class="main.java.com.example.UseItem"></bean>
     <bean id="useMeta" class="main.java.com.example.UseMeta" />
+
+    <!--使用jdbc-->
+    <!--<bean id="useJDBC" class="main.java.com.example.UseJDBC">-->
+        <!--&lt;!&ndash;<property name="driver" value="com.mysql.jdbc.Driver"></property>&ndash;&gt;-->
+        <!--&lt;!&ndash;&lt;!&ndash;<property name="driver"><value>com.mysql.jdbc.Driver</value></property>&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;<property name="url" value="jdbc:mysql://localhost:3306/test?user=root;password=1234.asd"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;使用properties&ndash;&gt;-->
+    <!--</bean>-->
+    <!--内部bean-->
+    <bean id="innerBean" class="main.java.com.example.InnerBean">
+        <property name="innerBeanItem">
+            <bean class="main.java.com.example.InnerBeanItem" />
+        </property>
+    </bean>
+    <bean id="listDemo" class="main.java.com.example.ListDemo">
+        <property name="nameList">
+            <list>
+                <value>Daniel</value>
+                <value>Jack</value>
+                <value>David</value>
+            </list>
+        </property>
+        <property name="nameMap">
+            <null/>
+        </property>
+        <!--空的value会给指定的参数注入""-->
+        <property name="innerString"><value></value></property>
+    </bean>
+    <!--使用命名空间-->
+    <bean id="usePNameSpace" class="main.java.com.example.UsePNameSpace"
+          p:name="Daniel"
+          p:age="12"
+          p:email="xxx@example.com"
+          p:pNameSpaceItem-ref="pNameSpaceItem"/>
+    <bean id="pNameSpaceItem" class="main.java.com.example.PNameSpaceItem" />
+
 </beans>
