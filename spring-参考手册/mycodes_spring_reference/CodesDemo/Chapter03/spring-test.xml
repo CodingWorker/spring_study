@@ -68,5 +68,12 @@
           p:email="xxx@example.com"
           p:pNameSpaceItem-ref="pNameSpaceItem"/>
     <bean id="pNameSpaceItem" class="main.java.com.example.PNameSpaceItem" />
+    <!--lazy-init 设置为true可以控制延迟初始化-->
+    <bean id="lazyInitDemo" class="main.java.com.example.LazyInitDemo" lazy-init="true"/>
+
+    <!--使用注解-->
+    <bean id="annocationDemo1" class="main.java.com.annocation.AnnocationDemo1" />
+    <bean id="innerTestDemo" class="main.java.com.annocation.InnerTestDemo" />
+    <bean id="autoWireDemo" class="main.java.com.annocation.AutoWireDemo" />
 
 </beans>

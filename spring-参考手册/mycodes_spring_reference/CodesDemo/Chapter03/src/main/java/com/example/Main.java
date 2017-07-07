@@ -1,5 +1,6 @@
 package main.java.com.example;
 
+import com.sun.imageio.plugins.common.LZWCompressor;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.FileSystemResource;
@@ -33,5 +34,9 @@ public class Main {
         UsePNameSpace usePNameSpace=(UsePNameSpace)bf.getBean("usePNameSpace");
         System.out.println(usePNameSpace.getEmail());
         System.out.println(usePNameSpace.getpNameSpaceItem());
+
+        //测试延迟初始化
+        LazyInitDemo lazyInitDemo=(LazyInitDemo)bf.getBean("lazyInitDemo");
+        System.out.println(lazyInitDemo.hashCode());
     }
 }
