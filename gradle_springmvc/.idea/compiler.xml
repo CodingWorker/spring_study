@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="my-spring-proj_main" target="1.8" />
+      <module name="my-spring-proj_test" target="1.8" />
+      <module name="portal_main" target="1.8" />
+      <module name="portal_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
