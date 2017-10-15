@@ -11,8 +11,8 @@ targetCompatibility=1.8
 
 repositories {
     maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
-    maven { url 'http://124.207.207.21:62125/repository/maven-central/' }
-    maven { url 'http://124.207.207.21:62125/repository/maven-snapshots/' }
+//    maven { url 'http://124.207.207.21:62125/repository/maven-central/' }
+//    maven { url 'http://124.207.207.21:62125/repository/maven-snapshots/' }
     mavenCentral()
 }
 

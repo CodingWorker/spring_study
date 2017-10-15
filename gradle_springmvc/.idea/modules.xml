@@ -5,7 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/my-spring-proj.iml" filepath="$PROJECT_DIR$/.idea/modules/my-spring-proj.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/my-spring-proj_main.iml" filepath="$PROJECT_DIR$/.idea/modules/my-spring-proj_main.iml" group="my-spring-proj" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/my-spring-proj_test.iml" filepath="$PROJECT_DIR$/.idea/modules/my-spring-proj_test.iml" group="my-spring-proj" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/portal.iml" filepath="$PROJECT_DIR$/.idea/modules/portal.iml" group="portal" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/portal/portal.iml" filepath="$PROJECT_DIR$/.idea/modules/portal/portal.iml" group="portal" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/portal/portal_main.iml" filepath="$PROJECT_DIR$/.idea/modules/portal/portal_main.iml" group="portal" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/portal/portal_test.iml" filepath="$PROJECT_DIR$/.idea/modules/portal/portal_test.iml" group="portal" />
     </modules>

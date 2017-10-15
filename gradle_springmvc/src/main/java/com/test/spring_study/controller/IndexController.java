@@ -2,13 +2,10 @@ package com.test.spring_study.controller;
 
 import com.test.spring_study.service.IIndexService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.mvc.condition.MediaTypeExpression;
 
 /**
  * Created by IntelliJ IDEA
