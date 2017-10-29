@@ -8,5 +8,4 @@ package com.test.spring_study.dao;
  */
 public class UserDAOTest {
 
-
 }

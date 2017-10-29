@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-app.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-app_main.iml" group="spring-app" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-app_test.iml" group="spring-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-web-app.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-web-app.iml" group="spring-web-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-web-app/spring-web-app_main.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-web-app/spring-web-app_main.iml" group="spring-web-app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring-web-app/spring-web-app_test.iml" filepath="$PROJECT_DIR$/.idea/modules/spring-web-app/spring-web-app_test.iml" group="spring-web-app" />
     </modules>
   </component>
 </project>

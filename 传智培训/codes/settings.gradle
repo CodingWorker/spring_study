@@ -1,2 +1,3 @@
 rootProject.name = 'spring-app'
+include 'spring-web-app'
 

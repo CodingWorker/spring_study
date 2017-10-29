@@ -1,8 +1,59 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="userDAO" class="com.test.spring_study.dao.UserDAO">
-
+    <!--scope默认是singleton,即单例的，如果设置为prototype则非单例-->
+    <bean id="userDAO"
+          class="com.test.spring_study.dao.UserDAO"
+          scope="singleton" init-method="sayHello" destroy-method="destroy">
     </bean>
+    <bean id="person" class="com.test.spring_study.model.Person" init-method="init">
+        <constructor-arg name="name" value="Daniel"></constructor-arg>
+        <constructor-arg name="age" value="12"></constructor-arg>
+        <property name="car" ref="car"></property>
+    </bean>
+    <bean id="car" class="com.test.spring_study.model.Car">
+        <!--通过setter方法注入属性值-->
+        <property name="name" value="Jack"></property>
+        <property name="price" value="12.00"></property>
+    </bean>
+
+    <!--使用p名称空间注入-->
+    <bean id="book" class="com.test.spring_study.model.Book" p:pageCount="100" p:price="10.00"></bean>
+
+    <!--使用spEL表达式注入-->
+    <bean id="carShop" class="com.test.spring_study.model.CarShop">
+        <property name="car" value="#{car}"></property>
+        <property name="carPrice" value="#{car.price}"></property>
+    </bean>
+
+    <!--注入复杂的集合属性-->
+    <bean id="collectionBucket" class="com.test.spring_study.model.CollectionBucket">
+        <property name="list">
+            <list>
+                <value>list-a</value>
+                <value>list-b</value>
+                <value>list-c</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="map-a" value="aa"></entry>
+                <entry key="map-b" value="bb"></entry>
+                <entry key="map-c" value="cc"></entry>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="prop-a">11</prop>
+                <prop key="prop-b">12</prop>
+                <prop key="prop-c">13</prop>
+            </props>
+        </property>
+    </bean>
+
+    <import resource="applicationContext2.xml"></import>
 </beans>
