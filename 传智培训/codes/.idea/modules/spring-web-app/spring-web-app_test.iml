@@ -9,7 +9,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="spring-web-app_main" />
   </component>
   <component name="TestModuleProperties" production-module="spring-web-app_main" />
 </module>
