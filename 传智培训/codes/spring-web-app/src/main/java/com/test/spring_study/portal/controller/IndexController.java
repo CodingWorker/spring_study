@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.portlet.ModelAndView;
 
 /**
  * Created by IntelliJ IDEA
@@ -14,8 +15,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller("")
 public class IndexController {
     @RequestMapping(value = "",method = RequestMethod.GET,produces = "application/json;charset=utf-8")
-    @ResponseBody
-    public String index(){
-        return "{\"code\":0,\"msg\":\"welcome to my web!\"}";
+    public ModelAndView index(){
+        //return "{\"code\":0,\"msg\":\"welcome to my web!\"}";
+        ModelAndView modelAndView=new ModelAndView("index/index");
+        modelAndView.addObject("user","Daniel");
+        modelAndView.addObject("age",12);
+
+        return modelAndView;
     }
 }

@@ -7,21 +7,31 @@
          metadata-complete="true">
 
     <fileter>
-        <filter-name>springmvc</filter-name>
+
+        <filter-name>spring-listen</filter-name>
         <filter-class>org.springframework.web.servlet.DispatcherServlet</filter-class>
     </fileter>
     <filter-mapping>
-        <filter-name>springmvc</filter-name>
+        <filter-name>spring-listen</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+    <!--配置springmvc 分发机制-->
+    <servlet>
+        <servlet-name>springmvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-mvc-config.xml</param-value>
+        </init-param>
+    </servlet>
 
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring-mvc-config.xml</param-value>
-    </context-param>
+    <servlet-mapping>
+        <servlet-name>springmvc</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
     <display-name>Welcome to Tomcat</display-name>
     <description>

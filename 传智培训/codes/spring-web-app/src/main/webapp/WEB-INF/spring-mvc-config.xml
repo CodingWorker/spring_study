@@ -4,4 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <import resource="spring-core-config.xml"></import>
+    <!-- don't handle the static resource -->
+    <mvc:default-servlet-handler />
+    <!-- if you use annotation you must configure following setting -->
+    <mvc:annotation-driven />
+    <!-- configure the InternalResourceViewResolver -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          id="internalResourceViewResolver">
+        <!-- 前缀 -->
+        <property name="prefix" value="/WEB-INF/views/" />
+        <!-- 后缀 -->
+        <property name="suffix" value=".jsp" />
+    </bean>
+
 </beans>
