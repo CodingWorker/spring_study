@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/spring-ioc-aop-app" />
             <option value="$PROJECT_DIR$/spring-web-app" />
           </set>
         </option>

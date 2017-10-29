@@ -1,3 +1,4 @@
 rootProject.name = 'spring-app'
 include 'spring-web-app'
+include 'spring-ioc-aop-app'
 

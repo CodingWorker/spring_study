@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="spring-app_main" target="1.8" />
       <module name="spring-app_test" target="1.8" />
+      <module name="spring-ioc-aop-app_main" target="1.8" />
+      <module name="spring-ioc-aop-app_test" target="1.8" />
       <module name="spring-web-app_main" target="1.8" />
       <module name="spring-web-app_test" target="1.8" />
     </bytecodeTargetLevel>

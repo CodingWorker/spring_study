@@ -1,10 +1,7 @@
-package com.test.spring_study.model;
+package com.test.spring_study.aop.model;
 
-import javafx.application.Application;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import javax.management.modelmbean.XMLParseException;
 
 /**
  * Created by IntelliJ IDEA

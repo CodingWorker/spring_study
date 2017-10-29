@@ -1,9 +1,7 @@
-package com.test.spring_study.model;
+package com.test.spring_study.aop.model;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import javax.smartcardio.CardTerminal;
 
 /**
  * Created by IntelliJ IDEA

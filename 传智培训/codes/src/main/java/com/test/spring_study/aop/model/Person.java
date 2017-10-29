@@ -1,12 +1,7 @@
-package com.test.spring_study.model;
+package com.test.spring_study.aop.model;
 
-import com.sun.media.sound.SoftTuning;
-import com.sun.org.apache.xpath.internal.SourceTree;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import javax.lang.model.SourceVersion;
-import java.io.File;
 
 /**
  * Created by IntelliJ IDEA
