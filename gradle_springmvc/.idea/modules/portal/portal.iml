@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id=":portal" external.linked.project.path="$MODULE_DIR$/../../../portal" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.test.spring_demo" external.system.module.version="1.0.0" type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="web" name="Web Gradle : portal-1.0.0.war">
-      <configuration>
-        <webroots>
-          <root url="file://$MODULE_DIR$/../../../portal/src/main/webapp" relative="/" />
-        </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/../../../portal/src/main/resources" />
-          <root url="file://$MODULE_DIR$/../../../portal/src/main/java" />
-        </sourceRoots>
-      </configuration>
-    </facet>
-  </component>
-  <component name="NewModuleRootManager">
-    <output url="file://$MODULE_DIR$/../../../portal/build" />
-    <output-test url="file://$MODULE_DIR$/../../../portal/build" />
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../portal">
-      <sourceFolder url="file://$MODULE_DIR$/../../../portal/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../portal/src/main/resources" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../portal/src/test/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../portal/src/test/resources" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../portal/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../portal/build" />
     </content>

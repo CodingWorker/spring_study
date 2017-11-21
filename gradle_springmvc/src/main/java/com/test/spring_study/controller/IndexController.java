@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 //千万不能用value指定，不知道的情况下可能导致整个接口注册不上
 @RequestMapping("/index")
-public class IndexController {
+public class IndexController{
     @Autowired
     private IIndexService indexService;
 
@@ -27,8 +27,8 @@ public class IndexController {
     }
 
     @RequestMapping(value = "",produces = "application/json")
-    public ModelAndView index(){
-        ModelAndView modelAndView=new ModelAndView("index/index");
+    public ModelAndView index() {
+        ModelAndView modelAndView = new ModelAndView("index/index");
         return modelAndView;
     }
 
